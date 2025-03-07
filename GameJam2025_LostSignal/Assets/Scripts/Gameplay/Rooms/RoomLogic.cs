@@ -4,16 +4,15 @@ using UnityEngine.UI;
 public class RoomLogic : MonoBehaviour
 {
     [Header("Raum Manager Sachen")]
+    [Space(10)]
     [SerializeField] Button CorrospondingButton;
     AudioSource telephoneAudio;
     AudioLowPassFilter lowPassFilter;
     [SerializeField] RoomManager.RoomState roomState;
     public RoomManager roomManager;
 
-    [Space(5)]
     float lastTime;
-    [Header("Delay für zurück Antwort")]
-    [SerializeField] float Delay;
+    float Delay;
     bool allowedToSpeak;
 
 
@@ -26,6 +25,8 @@ public class RoomLogic : MonoBehaviour
         telephoneAudio = CorrospondingButton.GetComponent<AudioSource>();
         lowPassFilter = telephoneAudio.GetComponent<AudioLowPassFilter>();
         lowPassFilter.cutoffFrequency = 750f;
+
+        
     }
 
     private void Update()
@@ -48,6 +49,7 @@ public class RoomLogic : MonoBehaviour
         {
             lastTime = Time.time;
             allowedToSpeak = true;
+            Delay = Random.Range(2f, 3.1f);
         }
     }
 

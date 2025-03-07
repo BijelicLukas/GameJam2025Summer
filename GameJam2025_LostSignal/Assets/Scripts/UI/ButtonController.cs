@@ -6,9 +6,6 @@ public class ButtonController : MonoBehaviour
     [SerializeField] int ButtonID;
     public RoomManager roomManager;
 
-
-
-
     public void OnButtonPressed()
     {
         GetComponent<AudioSource>().PlayDelayed(0.25f);
