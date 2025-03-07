@@ -150,6 +150,7 @@ GameObject:
   - component: {fileID: 4075611053770163351}
   - component: {fileID: 8361334556909240714}
   - component: {fileID: 8313494281704112384}
+  - component: {fileID: 8190976659496626661}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -283,7 +284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7859a594f48fc5a4f959d695c3e0eba1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonID: 1
+  ButtonID: 0
   roomManager: {fileID: 0}
 --- !u!82 &8313494281704112384
 AudioSource:
@@ -373,6 +374,31 @@ AudioSource:
     - serializedVersion: 3
       time: 0
       value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!169 &8190976659496626661
+AudioLowPassFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6560250870953729366}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_LowpassResonanceQ: 1
+  lowpassLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.22727273
       inSlope: 0
       outSlope: 0
       tangentMode: 0

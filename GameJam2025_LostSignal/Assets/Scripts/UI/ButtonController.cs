@@ -3,13 +3,16 @@ using UnityEngine.UI;
 
 public class ButtonController : MonoBehaviour
 {
-    [SerializeField] int buttonID;
+    [SerializeField] int ButtonID;
     public RoomManager roomManager;
+
+
+
 
     public void OnButtonPressed()
     {
         GetComponent<AudioSource>().PlayDelayed(0.25f);
-        switch(buttonID)
+        switch(ButtonID)
         {
             case 1:
                 roomManager.SetRoomState(RoomManager.RoomState.LT);
