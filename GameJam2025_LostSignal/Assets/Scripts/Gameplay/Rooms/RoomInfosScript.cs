@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "RoomInfosScript", menuName = "Scriptable Objects/RoomInfos")]
@@ -13,15 +15,15 @@ public class RoomInfosScript : ScriptableObject
     public Vector3 RoomMLPosition;
     public Vector3 RoomRLPosition;
 
-    public bool AttackingRoomLTPosition;
-    public bool AttackingRoomMTPosition;
-    public bool AttackingRoomRTPosition;
-    public bool AttackingRoomLMPosition;
-    public bool AttackingRoomMMPosition;
-    public bool AttackingRoomRMPosition;
-    public bool AttackingRoomLLPosition;
-    public bool AttackingRoomMLPosition;
-    public bool AttackingRoomRLPosition;
+    public Dictionary<RoomManager.RoomState,bool> AttackedRooms = new Dictionary<RoomManager.RoomState, bool>();
+    
+    public void FillDictionary()
+    {
+        foreach(RoomManager.RoomState room in System.Enum.GetValues(typeof(RoomManager.RoomState)))
+        {
+            AttackedRooms[room] = false;
+        }
+    }
 
 
 

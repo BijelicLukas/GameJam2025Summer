@@ -20,14 +20,17 @@ public class OpangasScript : MonoBehaviour
 
     private void Start()
     {
+        RoomInfos.FillDictionary();
         lastTime = Time.time;
         delay = Random.Range(5f, 10f);
         currentlyAttacking = false;
+
+        //foreach (var entry in RoomInfos.AttackedRooms) Debug.Log($"Wir haben {entry.Key} der folgende Antwort hat ob er angegriffen wird: {entry.Value}"); 
     }
 
     private void Update()
     {
-        if(!currentlyAttacking && lastTime + delay < Time.time)
+        if ((!currentlyAttacking && lastTime + delay < Time.time) || Input.GetKeyDown(KeyCode.O))
         {
             //Debug.Log("Opanga is on the Move!");
             lastTime = Time.time;
@@ -35,38 +38,38 @@ public class OpangasScript : MonoBehaviour
             chance = Random.Range(0, 100);
             currentlyAttacking = true;
 
-            if(chance <= 60) // 60% für Mitte
+            if (chance <= 60) // 60% für Mitte
             {
-                //Debug.Log("Opanga geht Mitte!");
+                Debug.Log("Opanga geht Mitte!");
                 transform.position = RoomInfos.RoomMMPosition;
-                RoomInfos.AttackingRoomMMPosition = true;
+                RoomInfos.AttackedRooms[RoomManager.RoomState.MM] = true;
                 PlaySound();
                 return;
             }
-            if(chance <= 90) // 30% für Kreuz
+            if (chance <= 90) // 30% für Kreuz
             {
                 // Da es 4 Möglichkeiten gibt muss es fair aufgeteilt werden
                 chance = Random.Range(0, 100);
-                switch(chance % 4)
+                switch (chance % 4)
                 {
                     case 0:
                         transform.position = RoomInfos.RoomLMPosition;
-                        RoomInfos.AttackingRoomLMPosition = true;
+                        RoomInfos.AttackedRooms[RoomManager.RoomState.LM] = true;
                         break;
                     case 1:
                         transform.position = RoomInfos.RoomMTPosition;
-                        RoomInfos.AttackingRoomMTPosition = true;
+                        RoomInfos.AttackedRooms[RoomManager.RoomState.MT] = true;
                         break;
                     case 2:
                         transform.position = RoomInfos.RoomMLPosition;
-                        RoomInfos.AttackingRoomMLPosition = true;
+                        RoomInfos.AttackedRooms[RoomManager.RoomState.ML] = true;
                         break;
                     case 3:
                         transform.position = RoomInfos.RoomRMPosition;
-                        RoomInfos.AttackingRoomRMPosition = true;
+                        RoomInfos.AttackedRooms[RoomManager.RoomState.RM] = true;
                         break;
                 }
-                //Debug.Log("Opanga greift Kreuzartig an!");
+                Debug.Log("Opanga greift Kreuzartig an!");
                 PlaySound();
                 return;
             }
@@ -76,22 +79,22 @@ public class OpangasScript : MonoBehaviour
             {
                 case 0:
                     transform.position = RoomInfos.RoomLTPosition;
-                    RoomInfos.AttackingRoomLTPosition = true;
+                    RoomInfos.AttackedRooms[RoomManager.RoomState.LT] = true;
                     break;
                 case 1:
                     transform.position = RoomInfos.RoomLLPosition;
-                    RoomInfos.AttackingRoomLLPosition = true;
+                    RoomInfos.AttackedRooms[RoomManager.RoomState.LL] = true;
                     break;
                 case 2:
                     transform.position = RoomInfos.RoomRTPosition;
-                    RoomInfos.AttackingRoomRTPosition = true;
+                    RoomInfos.AttackedRooms[RoomManager.RoomState.RT] = true;
                     break;
                 case 3:
                     transform.position = RoomInfos.RoomRLPosition;
-                    RoomInfos.AttackingRoomRLPosition = true;
+                    RoomInfos.AttackedRooms[RoomManager.RoomState.RL] = true;
                     break;
             }
-            //Debug.Log("Opanga greift Diagonal an!");
+            Debug.Log("Opanga greift Diagonal an!");
             PlaySound();
         }
     }

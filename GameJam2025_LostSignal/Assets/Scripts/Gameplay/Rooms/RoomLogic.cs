@@ -26,6 +26,7 @@ public class RoomLogic : MonoBehaviour
         telephoneAudio = CorrospondingButton.GetComponent<AudioSource>();
         lowPassFilter = telephoneAudio.GetComponent<AudioLowPassFilter>();
         lowPassFilter.cutoffFrequency = 750f;
+        
     }
 
     private void Update()
