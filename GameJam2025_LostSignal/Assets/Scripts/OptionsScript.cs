@@ -6,4 +6,5 @@ public class OptionsScript : ScriptableObject
     //public float Volume;
     public float TimerMinutes;
     public float TimerSeconds;
+    public int mistakes;
 }

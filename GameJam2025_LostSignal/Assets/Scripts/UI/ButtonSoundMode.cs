@@ -7,6 +7,7 @@ public class ButtonSoundMode : MonoBehaviour
     public RoomManager roomManager;
     public void OnButtonPressed()
     {
+        if(!enabled) return;
         if (RoomInfo.RoomRespondsReqeust) return;
         RoomInfo.RoomRespondsReqeust = true;
         GetComponent<AudioSource>().PlayDelayed(0.25f);

@@ -14,9 +14,6 @@ public class OpangasScript : MonoBehaviour
     [Space(10)]
     [SerializeField] protected RoomInfosScript RoomInfos;
 
-    [Space(10)]
-    [Header("Für die Terminierung sehr wichtig")]
-
     [Space(20)]
     [Header("Audio Sachen halt")]
     [Space(10)]

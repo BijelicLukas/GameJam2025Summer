@@ -6,12 +6,18 @@ public class ButtonTerminateMode : MonoBehaviour
     [SerializeField] RoomInfosScript RoomInfo;
     [SerializeField] ButtonManager buttonManager;
     [SerializeField] int ButtonID;
+    [SerializeField] OptionsScript optionInfo;
     public RoomManager roomManager;
 
-    
-    
+    private void Start()
+    {
+        optionInfo.mistakes = 0;
+    }
+
     public void OnButtonPressed()
     {
+        if (!enabled) return;
+        Debug.Log($"So many mistakes were made:" + optionInfo.mistakes);
         switch (ButtonID)
         {
             case 1:
@@ -21,7 +27,7 @@ public class ButtonTerminateMode : MonoBehaviour
                     buttonManager.ActivateTermination(RoomManager.RoomState.LT);
                     return;
                 }
-                Debug.Log("Das wird Konsequenzen haben!");
+                optionInfo.mistakes++;
                 break;
             case 2:
                 if (RoomInfo.AttackedRooms[RoomManager.RoomState.MT])
@@ -30,7 +36,7 @@ public class ButtonTerminateMode : MonoBehaviour
                     buttonManager.ActivateTermination(RoomManager.RoomState.MT);
                     return;
                 }
-                Debug.Log("Das wird Konsequenzen haben!");
+                optionInfo.mistakes++;
                 break;
             case 3:
                 if (RoomInfo.AttackedRooms[RoomManager.RoomState.RT])
@@ -39,7 +45,7 @@ public class ButtonTerminateMode : MonoBehaviour
                     buttonManager.ActivateTermination(RoomManager.RoomState.RT);
                     return;
                 }
-                Debug.Log("Das wird Konsequenzen haben!");
+                optionInfo.mistakes++;
                 break;
 
             case 4:
@@ -49,7 +55,7 @@ public class ButtonTerminateMode : MonoBehaviour
                     buttonManager.ActivateTermination(RoomManager.RoomState.LM);
                     return;
                 }
-                Debug.Log("Das wird Konsequenzen haben!");
+                optionInfo.mistakes++;
                 break;
             case 5:
                 if (RoomInfo.AttackedRooms[RoomManager.RoomState.MM])
@@ -58,7 +64,7 @@ public class ButtonTerminateMode : MonoBehaviour
                     buttonManager.ActivateTermination(RoomManager.RoomState.MM);
                     return;
                 }
-                Debug.Log("Das wird Konsequenzen haben!");
+                optionInfo.mistakes++;
                 break;
             case 6:
                 if (RoomInfo.AttackedRooms[RoomManager.RoomState.RM])
@@ -67,7 +73,7 @@ public class ButtonTerminateMode : MonoBehaviour
                     buttonManager.ActivateTermination(RoomManager.RoomState.RM);
                     return;
                 }
-                Debug.Log("Das wird Konsequenzen haben!");
+                optionInfo.mistakes++;
                 break;
 
             case 7:
@@ -77,7 +83,7 @@ public class ButtonTerminateMode : MonoBehaviour
                     buttonManager.ActivateTermination(RoomManager.RoomState.LL);
                     return;
                 }
-                Debug.Log("Das wird Konsequenzen haben!");
+                optionInfo.mistakes++;
                 break;
             case 8:
                 if (RoomInfo.AttackedRooms[RoomManager.RoomState.ML])
@@ -86,7 +92,7 @@ public class ButtonTerminateMode : MonoBehaviour
                     buttonManager.ActivateTermination(RoomManager.RoomState.ML);
                     return;
                 }
-                Debug.Log("Das wird Konsequenzen haben!");
+                optionInfo.mistakes++;
                 break;
             case 9:
                 if (RoomInfo.AttackedRooms[RoomManager.RoomState.RL])
@@ -95,7 +101,7 @@ public class ButtonTerminateMode : MonoBehaviour
                     buttonManager.ActivateTermination(RoomManager.RoomState.RL);
                     return;
                 }
-                Debug.Log("Das wird Konsequenzen haben!");
+                optionInfo.mistakes++;
                 break;
 
             default:

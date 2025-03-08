@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: LT
+  m_text: RL
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -313,7 +313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RoomInfo: {fileID: 11400000, guid: 89b4842f79ce4f44385697b10a05856d, type: 2}
-  ButtonID: 1
+  ButtonID: 9
   roomManager: {fileID: 0}
 --- !u!114 &8145311612169807815
 MonoBehaviour:
@@ -329,7 +329,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RoomInfo: {fileID: 11400000, guid: 89b4842f79ce4f44385697b10a05856d, type: 2}
   buttonManager: {fileID: 0}
-  ButtonID: 1
+  ButtonID: 9
+  optionInfo: {fileID: 11400000, guid: e2fc2c578b637bc40a041b866da85d6d, type: 2}
   roomManager: {fileID: 0}
 --- !u!82 &8313494281704112384
 AudioSource:
