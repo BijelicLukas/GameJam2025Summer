@@ -8,7 +8,9 @@ public class OpangasScript : MonoBehaviour
     float delay;
     int chance;
     protected bool currentlyAttacking;
-    protected RoomManager.RoomState lastAttackedRoom;
+    [HideInInspector]
+    public RoomManager.RoomState lastAttackedRoom;
+    OpangasAttack attackScript;
 
     [Header("Heya, wir brauchen die Infos für die Räume und so")]
     [Space(10)]
@@ -16,8 +18,7 @@ public class OpangasScript : MonoBehaviour
 
     [Space(20)]
     [Header("Audio Sachen halt")]
-    [Space(10)]
-    [SerializeField] AudioSource[] sounds;
+    public AudioSource[] sounds;
 
    protected virtual void Start()
     {
@@ -26,12 +27,15 @@ public class OpangasScript : MonoBehaviour
         lastTime = Time.time;
         delay = Random.Range(5f, 10f);
         currentlyAttacking = false;
+        attackScript = GetComponent<OpangasAttack>();
 
         //foreach (var entry in RoomInfos.AttackedRooms) Debug.Log($"Wir haben {entry.Key} der folgende Antwort hat ob er angegriffen wird: {entry.Value}");
     }
 
     protected virtual void Update()
     {
+        if (currentlyAttacking) attackScript.enabled = true;
+        if (attackScript.enabled && !currentlyAttacking) attackScript.enabled = false;
         if ((!currentlyAttacking && lastTime + delay < Time.time))
         {
             //Debug.Log("Opanga is on the Move!");
@@ -124,7 +128,6 @@ public class OpangasScript : MonoBehaviour
     {
         if (state != lastAttackedRoom) return;
         ResetAttack();
-
     }
 
     protected virtual void ResetAttack()

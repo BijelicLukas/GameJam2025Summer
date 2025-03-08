@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 20292073066817247}
   - component: {fileID: 497381923851271894}
+  - component: {fileID: 599999300890144906}
+  - component: {fileID: 3652949485575080594}
   - component: {fileID: 4303037389651252564}
   - component: {fileID: 5375306677347205173}
   - component: {fileID: 4051128639213528471}
@@ -47,11 +49,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8499540215084550778}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 70c666bcbc0a80f4d83383d99d175f74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lastAttackedRoom: 0
   RoomInfos: {fileID: 11400000, guid: 89b4842f79ce4f44385697b10a05856d, type: 2}
   sounds:
   - {fileID: 5375306677347205173}
@@ -60,7 +63,7 @@ MonoBehaviour:
   - {fileID: 7358016899311156075}
   - {fileID: 9168278267185703434}
   - {fileID: 2665889243935562675}
---- !u!114 &4303037389651252564
+--- !u!114 &599999300890144906
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -69,9 +72,34 @@ MonoBehaviour:
   m_GameObject: {fileID: 8499540215084550778}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c2a3f9eb135f7b4aa0d535e33f21340, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3652949485575080594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8499540215084550778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f5724d3808c30441ad31ca0132c1d46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4303037389651252564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8499540215084550778}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff4c29ad31194234b9f5875b68ae0b1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lastAttackedRoom: 0
   RoomInfos: {fileID: 11400000, guid: 89b4842f79ce4f44385697b10a05856d, type: 2}
   sounds:
   - {fileID: 5375306677347205173}
