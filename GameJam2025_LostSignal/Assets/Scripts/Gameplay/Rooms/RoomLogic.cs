@@ -8,8 +8,9 @@ public class RoomLogic : MonoBehaviour
     [SerializeField] Button CorrospondingButton;
     AudioSource telephoneAudio;
     AudioLowPassFilter lowPassFilter;
-    [SerializeField] RoomManager.RoomState roomState;
+    [SerializeField] RoomManager.RoomState RoomState;
     public RoomManager roomManager;
+    [SerializeField] RoomInfosScript RoomInfo;
 
     
     float lastTime;
@@ -31,6 +32,7 @@ public class RoomLogic : MonoBehaviour
 
     private void Update()
     {
+        //Debug.Log(thisRoom);
         if(allowedToSpeak && lastTime + delay < Time.time)
         {
             lowPassFilter.enabled = true;
@@ -38,19 +40,29 @@ public class RoomLogic : MonoBehaviour
             allowedToSpeak = false;
             telephoneAudio.Play();
         }
+
         if(!telephoneAudio.isPlaying)
         {
             lowPassFilter.enabled = false;
         }
+        
     }
     void OnRoomChange(RoomManager.RoomState newState)
     {
-        if(newState == roomState)
+        //Debug.Log($"{thisRoom} is being attack? {RoomInfo.AttackedRooms[thisRoom]}");
+        if (newState == RoomState)
         {
             lastTime = Time.time;
             allowedToSpeak = true;
             delay = Random.Range(2f, 3f);
+
+            if (RoomInfo.AttackedRooms[RoomState])
+            {
+                delay = Random.Range(5f, 7f);
+                Debug.Log("You found the Opanga");
+            }
         }
+        
     }
 
 }

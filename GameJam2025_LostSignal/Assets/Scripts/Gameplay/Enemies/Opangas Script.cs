@@ -8,6 +8,7 @@ public class OpangasScript : MonoBehaviour
     float delay;
     int chance;
     bool currentlyAttacking;
+    RoomManager.RoomState lastAttackedRoom;
 
     [Header("Heya, wir brauchen die Infos für die Räume und so")]
     [Space(10)]
@@ -25,14 +26,16 @@ public class OpangasScript : MonoBehaviour
         delay = Random.Range(5f, 10f);
         currentlyAttacking = false;
 
-        //foreach (var entry in RoomInfos.AttackedRooms) Debug.Log($"Wir haben {entry.Key} der folgende Antwort hat ob er angegriffen wird: {entry.Value}"); 
+        //foreach (var entry in RoomInfos.AttackedRooms) Debug.Log($"Wir haben {entry.Key} der folgende Antwort hat ob er angegriffen wird: {entry.Value}");
     }
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.I)) foreach (var entry in RoomInfos.AttackedRooms) Debug.Log($"Wir haben {entry.Key} der folgende Antwort hat ob er angegriffen wird: {entry.Value}");
         if ((!currentlyAttacking && lastTime + delay < Time.time) || Input.GetKeyDown(KeyCode.O))
         {
-            //Debug.Log("Opanga is on the Move!");
+            Debug.Log("Opanga is on the Move!");
+            RoomInfos.AttackedRooms[lastAttackedRoom] = false;
             lastTime = Time.time;
             delay = Random.Range(5f, 10f);
             chance = Random.Range(0, 100);
@@ -40,9 +43,10 @@ public class OpangasScript : MonoBehaviour
 
             if (chance <= 60) // 60% für Mitte
             {
-                Debug.Log("Opanga geht Mitte!");
+                //Debug.Log("Opanga geht Mitte!");
                 transform.position = RoomInfos.RoomMMPosition;
                 RoomInfos.AttackedRooms[RoomManager.RoomState.MM] = true;
+                lastAttackedRoom = RoomManager.RoomState.MM;
                 PlaySound();
                 return;
             }
@@ -55,21 +59,25 @@ public class OpangasScript : MonoBehaviour
                     case 0:
                         transform.position = RoomInfos.RoomLMPosition;
                         RoomInfos.AttackedRooms[RoomManager.RoomState.LM] = true;
+                        lastAttackedRoom = RoomManager.RoomState.LM;
                         break;
                     case 1:
                         transform.position = RoomInfos.RoomMTPosition;
                         RoomInfos.AttackedRooms[RoomManager.RoomState.MT] = true;
+                        lastAttackedRoom = RoomManager.RoomState.MT;
                         break;
                     case 2:
                         transform.position = RoomInfos.RoomMLPosition;
                         RoomInfos.AttackedRooms[RoomManager.RoomState.ML] = true;
+                        lastAttackedRoom = RoomManager.RoomState.ML;
                         break;
                     case 3:
                         transform.position = RoomInfos.RoomRMPosition;
                         RoomInfos.AttackedRooms[RoomManager.RoomState.RM] = true;
+                        lastAttackedRoom = RoomManager.RoomState.RM;
                         break;
                 }
-                Debug.Log("Opanga greift Kreuzartig an!");
+                //Debug.Log("Opanga greift Kreuzartig an!");
                 PlaySound();
                 return;
             }
@@ -80,21 +88,25 @@ public class OpangasScript : MonoBehaviour
                 case 0:
                     transform.position = RoomInfos.RoomLTPosition;
                     RoomInfos.AttackedRooms[RoomManager.RoomState.LT] = true;
+                    lastAttackedRoom = RoomManager.RoomState.LT;
                     break;
                 case 1:
                     transform.position = RoomInfos.RoomLLPosition;
                     RoomInfos.AttackedRooms[RoomManager.RoomState.LL] = true;
+                    lastAttackedRoom = RoomManager.RoomState.LL;
                     break;
                 case 2:
                     transform.position = RoomInfos.RoomRTPosition;
                     RoomInfos.AttackedRooms[RoomManager.RoomState.RT] = true;
+                    lastAttackedRoom = RoomManager.RoomState.RT;
                     break;
                 case 3:
                     transform.position = RoomInfos.RoomRLPosition;
                     RoomInfos.AttackedRooms[RoomManager.RoomState.RL] = true;
+                    lastAttackedRoom = RoomManager.RoomState.RL;
                     break;
             }
-            Debug.Log("Opanga greift Diagonal an!");
+            //Debug.Log("Opanga greift Diagonal an!");
             PlaySound();
         }
     }

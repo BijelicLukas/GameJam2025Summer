@@ -22,6 +22,7 @@ public class RoomManager : MonoBehaviour
     private void Start()
     {
         SetRoomState(RoomState.None);
+        
     }
 
     public event Action<RoomState> OnRoomStateChanged;
@@ -30,7 +31,7 @@ public class RoomManager : MonoBehaviour
     public void SetRoomState(RoomState newState)
     {
         currentState = newState;
-        Debug.Log($"We changed our focus to Room {currentState}");
+        //Debug.Log($"We changed our focus to Room {currentState}");
         OnRoomStateChanged?.Invoke(currentState);
     }
 }
