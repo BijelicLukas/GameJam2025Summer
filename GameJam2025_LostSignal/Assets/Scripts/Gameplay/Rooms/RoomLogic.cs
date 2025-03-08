@@ -13,7 +13,7 @@ public class RoomLogic : MonoBehaviour
 
     
     float lastTime;
-    float Delay;
+    float delay;
     bool allowedToSpeak;
 
 
@@ -30,7 +30,7 @@ public class RoomLogic : MonoBehaviour
 
     private void Update()
     {
-        if(allowedToSpeak && lastTime + Delay < Time.time)
+        if(allowedToSpeak && lastTime + delay < Time.time)
         {
             lowPassFilter.enabled = true;
             Debug.Log("Lets fucking go, SPEAKING");
@@ -48,7 +48,7 @@ public class RoomLogic : MonoBehaviour
         {
             lastTime = Time.time;
             allowedToSpeak = true;
-            Delay = Random.Range(2f, 3.1f);
+            delay = Random.Range(2f, 3f);
         }
     }
 
