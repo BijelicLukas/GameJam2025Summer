@@ -6,11 +6,29 @@ public class ButtonController : MonoBehaviour
     [SerializeField] int ButtonID;
     public RoomManager roomManager;
     [SerializeField] RoomInfosScript RoomInfo;
+    [SerializeField] ButtonManager buttonManager;
+    bool terminateMode;
 
 
     private void Start()
     {
+        buttonManager.OnButtonStateChange += ChangeMode;
         RoomInfo.RoomRespondsReqeust = false;
+        terminateMode = false;
+    }
+
+    void ChangeMode(ButtonManager.ButtonState newState)
+    {
+        if(newState == ButtonManager.ButtonState.Terminate)
+        {
+            //Debug.Log("IT'S KILLING TIME!");
+            terminateMode=true;
+        }
+        else
+        {
+            //Debug.Log("Let's think it through!");
+            terminateMode = false;
+        }
     }
 
     public void OnButtonPressed()
