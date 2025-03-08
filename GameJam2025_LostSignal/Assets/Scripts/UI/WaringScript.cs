@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class WaringScript : MonoBehaviour
@@ -23,9 +24,9 @@ public class WaringScript : MonoBehaviour
             case 2:
                 panel.color = Color.red; break;
             case 3:
-                Debug.Log("Time for Game over Screen!"); break;
+                SceneManager.LoadScene("Lose Screen"); break;
             default:
-                Debug.Log("HOW, WHAT. THE MATH AIN'T MATHING ANYMORE HOW DID YOU GOT HERE... Still Game Over Screen"); break;
+                SceneManager.LoadScene("Lose Screen"); break;
         }
     }
 }
