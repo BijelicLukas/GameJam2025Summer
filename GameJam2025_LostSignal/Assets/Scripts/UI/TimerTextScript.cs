@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TimerTextScript : MonoBehaviour
 {
@@ -12,13 +13,14 @@ public class TimerTextScript : MonoBehaviour
     private void Start()
     {
         text = GetComponent<TextMeshProUGUI>();
-
-        optionInfo.TimerMinutes = 5;
-        optionInfo.TimerSeconds = 50;
     }
 
     private void OnEnable()
     {
+        //optionInfo.TimerMinutes = 5;
+        //optionInfo.TimerSeconds = 50;
+        optionInfo.TimerMinutes = 0;
+        optionInfo.TimerSeconds = 20;
         startTimer = Time.time;
         TimeDuration = optionInfo.TimerMinutes * 60 + optionInfo.TimerSeconds;
     }
@@ -27,7 +29,7 @@ public class TimerTextScript : MonoBehaviour
     {
         if(startTimer + TimeDuration < Time.time)
         {
-            Debug.Log("Spiel vorbei, du hast gewonnen");
+            SceneManager.LoadScene("Win Screen");
             return;
         }
 

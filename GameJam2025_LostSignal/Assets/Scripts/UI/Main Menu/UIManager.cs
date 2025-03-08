@@ -42,4 +42,7 @@ public class UIManager : MonoBehaviour
        // Option & Tutorial
             // Go Back
             public void ShowMainMenu() => SwitchState(MenuState.MainMenu);
+
+    // Win und Lose
+    public void GetBackToMenu() => SceneManager.LoadScene("Main Menu");
 }
