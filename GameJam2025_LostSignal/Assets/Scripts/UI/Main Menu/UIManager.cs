@@ -2,6 +2,7 @@ using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -27,4 +28,18 @@ public class UIManager : MonoBehaviour
     {
         SwitchState(MenuState.MainMenu);
     }
+
+    // Methoden für Die Buttons:
+        // Main Menu
+            //Start Game
+            public void StartGame() => SceneManager.LoadScene("GameScene");
+            // Optionen
+            public void ShowOption() => SwitchState(MenuState.Options);
+            // Leave Game
+            public void ShowQuitScreen() => SwitchState(MenuState.Quit);
+            // Tutorial
+            public void ShowTutorial() => SwitchState(MenuState.Tutorial);
+       // Option & Tutorial
+            // Go Back
+            public void ShowMainMenu() => SwitchState(MenuState.MainMenu);
 }
