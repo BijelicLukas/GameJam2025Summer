@@ -149,6 +149,8 @@ GameObject:
   - component: {fileID: 5587550137011644696}
   - component: {fileID: 4075611053770163351}
   - component: {fileID: 8361334556909240714}
+  - component: {fileID: 2468487660914953045}
+  - component: {fileID: 8145311612169807815}
   - component: {fileID: 8313494281704112384}
   - component: {fileID: 8190976659496626661}
   m_Layer: 5
@@ -260,8 +262,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8361334556909240714}
-        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+      - m_Target: {fileID: 2468487660914953045}
+        m_TargetAssemblyTypeName: ButtonSoundMode, Assembly-CSharp
+        m_MethodName: OnButtonPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8145311612169807815}
+        m_TargetAssemblyTypeName: ButtonTerminateMode, Assembly-CSharp
         m_MethodName: OnButtonPressed
         m_Mode: 1
         m_Arguments:
@@ -284,10 +298,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7859a594f48fc5a4f959d695c3e0eba1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ButtonID: 1
-  roomManager: {fileID: 0}
   RoomInfo: {fileID: 11400000, guid: 89b4842f79ce4f44385697b10a05856d, type: 2}
   buttonManager: {fileID: 0}
+--- !u!114 &2468487660914953045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6560250870953729366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ca50e4b0bf891046a757347815e4ccc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RoomInfo: {fileID: 11400000, guid: 89b4842f79ce4f44385697b10a05856d, type: 2}
+  ButtonID: 1
+  roomManager: {fileID: 0}
+--- !u!114 &8145311612169807815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6560250870953729366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9189ca1c64e1faa4b9cf753b1d672be3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RoomInfo: {fileID: 11400000, guid: 89b4842f79ce4f44385697b10a05856d, type: 2}
+  buttonManager: {fileID: 0}
+  ButtonID: 1
+  roomManager: {fileID: 0}
 --- !u!82 &8313494281704112384
 AudioSource:
   m_ObjectHideFlags: 0

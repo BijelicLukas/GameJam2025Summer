@@ -14,6 +14,9 @@ public class OpangasScript : MonoBehaviour
     [Space(10)]
     [SerializeField] protected RoomInfosScript RoomInfos;
 
+    [Space(10)]
+    [Header("Für die Terminierung sehr wichtig")]
+
     [Space(20)]
     [Header("Audio Sachen halt")]
     [Space(10)]
@@ -22,6 +25,7 @@ public class OpangasScript : MonoBehaviour
    protected virtual void Start()
     {
         RoomInfos.FillDictionary();
+        ButtonManager.TerminatingRoom += AreWeCooked;
         lastTime = Time.time;
         delay = Random.Range(5f, 10f);
         currentlyAttacking = false;
@@ -34,15 +38,14 @@ public class OpangasScript : MonoBehaviour
         if ((!currentlyAttacking && lastTime + delay < Time.time))
         {
             //Debug.Log("Opanga is on the Move!");
-            RoomInfos.AttackedRooms[lastAttackedRoom] = false;
-            lastTime = Time.time;
-            delay = Random.Range(5f, 10f);
+            ResetAttack();
             chance = Random.Range(0, 100);
             currentlyAttacking = true;
 
-            if (chance <= 60) // 60% für Mitte
+            // 60% für Mitte
+            if (chance <= 60)
             {
-                Debug.Log("Opanga geht Mitte!");
+                //Debug.Log("Opanga geht Mitte!");
                 if (RoomInfos.AttackedRooms[RoomManager.RoomState.MM] == true) { currentlyAttacking = false; return; }
                 transform.position = RoomInfos.RoomMMPosition;
                 RoomInfos.AttackedRooms[RoomManager.RoomState.MM] = true;
@@ -50,7 +53,8 @@ public class OpangasScript : MonoBehaviour
                 PlaySound();
                 return;
             }
-            if (chance <= 90) // 30% für Kreuz
+            // 30% für Kreuz
+            if (chance <= 90) 
             {
                 // Da es 4 Möglichkeiten gibt muss es fair aufgeteilt werden
                 chance = Random.Range(0, 100);
@@ -81,7 +85,7 @@ public class OpangasScript : MonoBehaviour
                         lastAttackedRoom = RoomManager.RoomState.RM;
                         break;
                 }
-                Debug.Log("Opanga greift Kreuzartig an!");
+                //Debug.Log("Opanga greift Kreuzartig an!");
                 PlaySound();
                 return;
             }
@@ -114,9 +118,24 @@ public class OpangasScript : MonoBehaviour
                     lastAttackedRoom = RoomManager.RoomState.RL;
                     break;
             }
-            Debug.Log("Opanga greift Diagonal an!");
+            //Debug.Log("Opanga greift Diagonal an!");
             PlaySound();
         }
+    }
+
+    protected virtual void AreWeCooked(RoomManager.RoomState state)
+    {
+        if (state != lastAttackedRoom) return;
+        ResetAttack();
+
+    }
+
+    protected virtual void ResetAttack()
+    {
+        RoomInfos.AttackedRooms[lastAttackedRoom] = false;
+        lastTime = Time.time;
+        delay = Random.Range(5f, 20f);
+        currentlyAttacking = false;
     }
 
     protected void PlaySound()

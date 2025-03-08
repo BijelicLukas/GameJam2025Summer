@@ -3,21 +3,25 @@ using UnityEngine.UI;
 
 public class ButtonController : MonoBehaviour
 {
-    [SerializeField] int ButtonID;
-    public RoomManager roomManager;
+    
+    
     [SerializeField] RoomInfosScript RoomInfo;
     [SerializeField] ButtonManager buttonManager;
-    bool terminateMode;
     Button myButton;
+    ButtonTerminateMode terminateScript;
+    ButtonSoundMode soundScript;
 
+    
 
     private void Start()
     {
         buttonManager.OnButtonStateChange += ChangeMode;
         RoomInfo.RoomRespondsReqeust = false;
-        terminateMode = false;
+        terminateScript = GetComponent<ButtonTerminateMode>();
+        soundScript = GetComponent<ButtonSoundMode>();
         myButton = GetComponent<Button>();
         ChangeMode(ButtonManager.ButtonState.Sound);
+
     }
 
     void ChangeMode(ButtonManager.ButtonState newState)
@@ -25,14 +29,16 @@ public class ButtonController : MonoBehaviour
         if(newState == ButtonManager.ButtonState.Terminate)
         {
             //Debug.Log("IT'S KILLING TIME!");
-            terminateMode =true;
+            terminateScript.enabled = true;
+            soundScript.enabled = false;
             ChangeButtonColor(new Color32(255, 102, 102,255), Color.red, new Color32(145, 0, 0,255));
             
         }
         else
         {
             //Debug.Log("Let's think it through!");
-            terminateMode = false;
+            terminateScript.enabled = false;
+            soundScript.enabled = true;
             ChangeButtonColor(Color.grey, Color.green, new Color32(21, 115, 0,255));
         }
     }
@@ -47,47 +53,5 @@ public class ButtonController : MonoBehaviour
         myButton.colors = colorBlock;
     }
 
-    public void OnButtonPressed()
-    {
-        if (RoomInfo.RoomRespondsReqeust) return;
-        RoomInfo.RoomRespondsReqeust = true;
-        GetComponent<AudioSource>().PlayDelayed(0.25f);
-        switch(ButtonID)
-        {
-            case 1:
-                roomManager.SetRoomState(RoomManager.RoomState.LT);
-                break;
-            case 2:
-                roomManager.SetRoomState(RoomManager.RoomState.MT);
-                break;
-            case 3:
-                roomManager.SetRoomState(RoomManager.RoomState.RT);
-                break;
-
-            case 4:
-                roomManager.SetRoomState(RoomManager.RoomState.LM);
-                break;
-            case 5:
-                roomManager.SetRoomState(RoomManager.RoomState.MM);
-                break;
-            case 6:
-                roomManager.SetRoomState(RoomManager.RoomState.RM);
-                break;
-
-            case 7:
-                roomManager.SetRoomState(RoomManager.RoomState.LL);
-                break;
-            case 8:
-                roomManager.SetRoomState(RoomManager.RoomState.ML);
-                break;
-            case 9:
-                roomManager.SetRoomState(RoomManager.RoomState.RL);
-                break;
-
-            default:
-                roomManager.SetRoomState(RoomManager.RoomState.None);
-                Debug.Log("Hey Shitface, you forgot to write the Number for the Button. FUCK YOU!");
-                break;
-        }
-    }
+   
 }
