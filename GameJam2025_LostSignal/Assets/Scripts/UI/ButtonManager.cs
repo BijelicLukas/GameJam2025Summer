@@ -9,7 +9,7 @@ public class ButtonManager : MonoBehaviour
 
     private void Start()
     {
-        currentState = ButtonState.Sound;
+        SetButtonState(ButtonState.Sound);
     }
 
     public event Action<ButtonState> OnButtonStateChange;

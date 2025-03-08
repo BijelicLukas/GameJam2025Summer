@@ -8,6 +8,7 @@ public class ButtonController : MonoBehaviour
     [SerializeField] RoomInfosScript RoomInfo;
     [SerializeField] ButtonManager buttonManager;
     bool terminateMode;
+    Button myButton;
 
 
     private void Start()
@@ -15,6 +16,8 @@ public class ButtonController : MonoBehaviour
         buttonManager.OnButtonStateChange += ChangeMode;
         RoomInfo.RoomRespondsReqeust = false;
         terminateMode = false;
+        myButton = GetComponent<Button>();
+        ChangeMode(ButtonManager.ButtonState.Sound);
     }
 
     void ChangeMode(ButtonManager.ButtonState newState)
@@ -22,13 +25,26 @@ public class ButtonController : MonoBehaviour
         if(newState == ButtonManager.ButtonState.Terminate)
         {
             //Debug.Log("IT'S KILLING TIME!");
-            terminateMode=true;
+            terminateMode =true;
+            ChangeButtonColor(new Color32(255, 102, 102,255), Color.red, new Color32(145, 0, 0,255));
+            
         }
         else
         {
             //Debug.Log("Let's think it through!");
             terminateMode = false;
+            ChangeButtonColor(Color.grey, Color.green, new Color32(21, 115, 0,255));
         }
+    }
+
+    private void ChangeButtonColor(Color normal, Color highlighted, Color pressed)
+    {
+        ColorBlock colorBlock = myButton.colors;
+        colorBlock.normalColor = normal;
+        colorBlock.highlightedColor = highlighted;
+        colorBlock.pressedColor = pressed;
+        colorBlock.selectedColor = pressed;
+        myButton.colors = colorBlock;
     }
 
     public void OnButtonPressed()
