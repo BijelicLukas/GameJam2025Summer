@@ -7,19 +7,19 @@ public class OpangasScript : MonoBehaviour
     float lastTime;
     float delay;
     int chance;
-    bool currentlyAttacking;
-    RoomManager.RoomState lastAttackedRoom;
+    protected bool currentlyAttacking;
+    protected RoomManager.RoomState lastAttackedRoom;
 
     [Header("Heya, wir brauchen die Infos für die Räume und so")]
     [Space(10)]
-    [SerializeField] RoomInfosScript RoomInfos;
+    [SerializeField] protected RoomInfosScript RoomInfos;
 
     [Space(20)]
     [Header("Audio Sachen halt")]
     [Space(10)]
     [SerializeField] AudioSource[] sounds;
 
-    private void Start()
+   protected virtual void Start()
     {
         RoomInfos.FillDictionary();
         lastTime = Time.time;
@@ -29,12 +29,11 @@ public class OpangasScript : MonoBehaviour
         //foreach (var entry in RoomInfos.AttackedRooms) Debug.Log($"Wir haben {entry.Key} der folgende Antwort hat ob er angegriffen wird: {entry.Value}");
     }
 
-    private void Update()
+    protected virtual void Update()
     {
-        if (Input.GetKeyDown(KeyCode.I)) foreach (var entry in RoomInfos.AttackedRooms) Debug.Log($"Wir haben {entry.Key} der folgende Antwort hat ob er angegriffen wird: {entry.Value}");
-        if ((!currentlyAttacking && lastTime + delay < Time.time) || Input.GetKeyDown(KeyCode.O))
+        if ((!currentlyAttacking && lastTime + delay < Time.time))
         {
-            Debug.Log("Opanga is on the Move!");
+            //Debug.Log("Opanga is on the Move!");
             RoomInfos.AttackedRooms[lastAttackedRoom] = false;
             lastTime = Time.time;
             delay = Random.Range(5f, 10f);
@@ -43,7 +42,8 @@ public class OpangasScript : MonoBehaviour
 
             if (chance <= 60) // 60% für Mitte
             {
-                //Debug.Log("Opanga geht Mitte!");
+                Debug.Log("Opanga geht Mitte!");
+                if (RoomInfos.AttackedRooms[RoomManager.RoomState.MM] == true) { currentlyAttacking = false; return; }
                 transform.position = RoomInfos.RoomMMPosition;
                 RoomInfos.AttackedRooms[RoomManager.RoomState.MM] = true;
                 lastAttackedRoom = RoomManager.RoomState.MM;
@@ -57,27 +57,31 @@ public class OpangasScript : MonoBehaviour
                 switch (chance % 4)
                 {
                     case 0:
+                        if (RoomInfos.AttackedRooms[RoomManager.RoomState.LM] == true) { currentlyAttacking = false; return; }
                         transform.position = RoomInfos.RoomLMPosition;
                         RoomInfos.AttackedRooms[RoomManager.RoomState.LM] = true;
                         lastAttackedRoom = RoomManager.RoomState.LM;
                         break;
                     case 1:
+                        if (RoomInfos.AttackedRooms[RoomManager.RoomState.MT] == true) { currentlyAttacking = false; return; }
                         transform.position = RoomInfos.RoomMTPosition;
                         RoomInfos.AttackedRooms[RoomManager.RoomState.MT] = true;
                         lastAttackedRoom = RoomManager.RoomState.MT;
                         break;
                     case 2:
+                        if (RoomInfos.AttackedRooms[RoomManager.RoomState.ML] == true) { currentlyAttacking = false; return; }
                         transform.position = RoomInfos.RoomMLPosition;
                         RoomInfos.AttackedRooms[RoomManager.RoomState.ML] = true;
                         lastAttackedRoom = RoomManager.RoomState.ML;
                         break;
                     case 3:
+                        if (RoomInfos.AttackedRooms[RoomManager.RoomState.RM] == true) { currentlyAttacking = false; return; }
                         transform.position = RoomInfos.RoomRMPosition;
                         RoomInfos.AttackedRooms[RoomManager.RoomState.RM] = true;
                         lastAttackedRoom = RoomManager.RoomState.RM;
                         break;
                 }
-                //Debug.Log("Opanga greift Kreuzartig an!");
+                Debug.Log("Opanga greift Kreuzartig an!");
                 PlaySound();
                 return;
             }
@@ -86,32 +90,36 @@ public class OpangasScript : MonoBehaviour
             switch (chance % 4)
             {
                 case 0:
+                    if (RoomInfos.AttackedRooms[RoomManager.RoomState.LT] == true) { currentlyAttacking = false; return; }
                     transform.position = RoomInfos.RoomLTPosition;
                     RoomInfos.AttackedRooms[RoomManager.RoomState.LT] = true;
                     lastAttackedRoom = RoomManager.RoomState.LT;
                     break;
                 case 1:
+                    if (RoomInfos.AttackedRooms[RoomManager.RoomState.LL] == true) { currentlyAttacking = false; return; }
                     transform.position = RoomInfos.RoomLLPosition;
                     RoomInfos.AttackedRooms[RoomManager.RoomState.LL] = true;
                     lastAttackedRoom = RoomManager.RoomState.LL;
                     break;
                 case 2:
+                    if (RoomInfos.AttackedRooms[RoomManager.RoomState.RT] == true) { currentlyAttacking = false; return; }
                     transform.position = RoomInfos.RoomRTPosition;
                     RoomInfos.AttackedRooms[RoomManager.RoomState.RT] = true;
                     lastAttackedRoom = RoomManager.RoomState.RT;
                     break;
                 case 3:
+                    if (RoomInfos.AttackedRooms[RoomManager.RoomState.RL] == true) { currentlyAttacking = false; return; }
                     transform.position = RoomInfos.RoomRLPosition;
                     RoomInfos.AttackedRooms[RoomManager.RoomState.RL] = true;
                     lastAttackedRoom = RoomManager.RoomState.RL;
                     break;
             }
-            //Debug.Log("Opanga greift Diagonal an!");
+            Debug.Log("Opanga greift Diagonal an!");
             PlaySound();
         }
     }
 
-    private void PlaySound()
+    protected void PlaySound()
     {
         int soundIndex= Random.Range(0, sounds.Length - 1);
         float newPitch = Random.Range(1.25f, 2.5f);

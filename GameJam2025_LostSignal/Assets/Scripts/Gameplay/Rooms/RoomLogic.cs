@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,6 +18,7 @@ public class RoomLogic : MonoBehaviour
     float delay;
     bool allowedToSpeak;
 
+    //public event Action<bool> DoneSpeaking;
 
     private void Start()
     {
@@ -36,6 +38,7 @@ public class RoomLogic : MonoBehaviour
         if(allowedToSpeak && lastTime + delay < Time.time)
         {
             lowPassFilter.enabled = true;
+            RoomInfo.RoomRespondsReqeust = false;
             Debug.Log("Lets fucking go, SPEAKING");
             allowedToSpeak = false;
             telephoneAudio.Play();
@@ -54,11 +57,11 @@ public class RoomLogic : MonoBehaviour
         {
             lastTime = Time.time;
             allowedToSpeak = true;
-            delay = Random.Range(2f, 3f);
+            delay = UnityEngine.Random.Range(2f, 3f);
 
             if (RoomInfo.AttackedRooms[RoomState])
             {
-                delay = Random.Range(5f, 7f);
+                delay = UnityEngine.Random.Range(5f, 7f);
                 Debug.Log("You found the Opanga");
             }
         }

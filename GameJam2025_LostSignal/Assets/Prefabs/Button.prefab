@@ -284,8 +284,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7859a594f48fc5a4f959d695c3e0eba1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ButtonID: 0
+  ButtonID: 2
   roomManager: {fileID: 0}
+  RoomInfo: {fileID: 11400000, guid: 89b4842f79ce4f44385697b10a05856d, type: 2}
 --- !u!82 &8313494281704112384
 AudioSource:
   m_ObjectHideFlags: 0

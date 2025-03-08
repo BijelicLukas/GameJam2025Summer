@@ -15,6 +15,8 @@ public class RoomInfosScript : ScriptableObject
     public Vector3 RoomMLPosition;
     public Vector3 RoomRLPosition;
 
+    public bool RoomRespondsReqeust;
+
     public Dictionary<RoomManager.RoomState,bool> AttackedRooms = new Dictionary<RoomManager.RoomState, bool>();
     
     public void FillDictionary()

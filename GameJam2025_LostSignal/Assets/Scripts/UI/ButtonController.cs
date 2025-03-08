@@ -5,9 +5,18 @@ public class ButtonController : MonoBehaviour
 {
     [SerializeField] int ButtonID;
     public RoomManager roomManager;
+    [SerializeField] RoomInfosScript RoomInfo;
+
+
+    private void Start()
+    {
+        RoomInfo.RoomRespondsReqeust = false;
+    }
 
     public void OnButtonPressed()
     {
+        if (RoomInfo.RoomRespondsReqeust) return;
+        RoomInfo.RoomRespondsReqeust = true;
         GetComponent<AudioSource>().PlayDelayed(0.25f);
         switch(ButtonID)
         {
