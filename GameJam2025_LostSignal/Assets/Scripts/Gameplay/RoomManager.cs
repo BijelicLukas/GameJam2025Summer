@@ -25,6 +25,7 @@ public class RoomManager : MonoBehaviour
     }
 
     public event Action<RoomState> OnRoomStateChanged;
+    
 
     public void SetRoomState(RoomState newState)
     {

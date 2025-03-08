@@ -2424,6 +2424,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ButtonLT
       objectReference: {fileID: 0}
+    - target: {fileID: 8190976659496626661, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8361334556909240714, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: ButtonID
       value: 1

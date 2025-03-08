@@ -11,6 +11,7 @@ public class RoomLogic : MonoBehaviour
     [SerializeField] RoomManager.RoomState roomState;
     public RoomManager roomManager;
 
+    
     float lastTime;
     float Delay;
     bool allowedToSpeak;
@@ -25,8 +26,6 @@ public class RoomLogic : MonoBehaviour
         telephoneAudio = CorrospondingButton.GetComponent<AudioSource>();
         lowPassFilter = telephoneAudio.GetComponent<AudioLowPassFilter>();
         lowPassFilter.cutoffFrequency = 750f;
-
-        
     }
 
     private void Update()
