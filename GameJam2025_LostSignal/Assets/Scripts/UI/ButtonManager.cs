@@ -14,10 +14,16 @@ public class ButtonManager : MonoBehaviour
 
     public event Action<ButtonState> OnButtonStateChange;
     public static event Action<RoomManager.RoomState> TerminatingRoom;
+    public static event Action<RoomManager.RoomState> CallingForRoom;
 
     public void ActivateTermination(RoomManager.RoomState state)
     {
         TerminatingRoom?.Invoke(state);
+    }
+
+    public void ActivateSound(RoomManager.RoomState state)
+    {
+        CallingForRoom?.Invoke(state);
     }
 
     public void SetButtonState(ButtonState state)

@@ -5,6 +5,7 @@ using UnityEngine.UIElements;
 public class ButtonSoundMode : MonoBehaviour
 {
     [SerializeField] RoomInfosScript RoomInfo;
+    [SerializeField] ButtonManager buttonManager;
     [SerializeField] int ButtonID;
     public RoomManager roomManager;
     public void OnButtonPressed()
@@ -20,40 +21,47 @@ public class ButtonSoundMode : MonoBehaviour
         GetComponent<AudioSource>().PlayDelayed(0.25f);
         switch (ButtonID)
         {
+            
             case 1:
-                roomManager.SetRoomState(RoomManager.RoomState.LT);
+                CallingRoom(RoomManager.RoomState.LT);
                 break;
             case 2:
-                roomManager.SetRoomState(RoomManager.RoomState.MT);
+                CallingRoom(RoomManager.RoomState.MT);
                 break;
             case 3:
-                roomManager.SetRoomState(RoomManager.RoomState.RT);
+                CallingRoom(RoomManager.RoomState.RT);
                 break;
 
             case 4:
-                roomManager.SetRoomState(RoomManager.RoomState.LM);
+                CallingRoom(RoomManager.RoomState.LM);
                 break;
             case 5:
-                roomManager.SetRoomState(RoomManager.RoomState.MM);
+                CallingRoom(RoomManager.RoomState.MM);
                 break;
             case 6:
-                roomManager.SetRoomState(RoomManager.RoomState.RM);
+                CallingRoom(RoomManager.RoomState.RM);
                 break;
 
             case 7:
-                roomManager.SetRoomState(RoomManager.RoomState.LL);
+                CallingRoom(RoomManager.RoomState.LL);
                 break;
             case 8:
-                roomManager.SetRoomState(RoomManager.RoomState.ML);
+                CallingRoom(RoomManager.RoomState.ML);
                 break;
             case 9:
-                roomManager.SetRoomState(RoomManager.RoomState.RL);
+                CallingRoom(RoomManager.RoomState.RL);
                 break;
 
             default:
-                roomManager.SetRoomState(RoomManager.RoomState.None);
+                CallingRoom(RoomManager.RoomState.None);
                 Debug.Log("Hey Shitface, you forgot to write the Number for the Button. FUCK YOU!");
                 break;
         }
+    }
+
+    private void CallingRoom(RoomManager.RoomState state)
+    {
+        buttonManager.ActivateSound(state);
+        roomManager.SetRoomState(state);
     }
 }

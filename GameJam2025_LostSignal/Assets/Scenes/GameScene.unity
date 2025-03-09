@@ -247,7 +247,7 @@ PrefabInstance:
     - target: {fileID: 3652949485575080594, guid: cb8eaa99e82d4984e929061d0d919354, type: 3}
       propertyPath: JumpscareCanvas
       value: 
-      objectReference: {fileID: 1851064367}
+      objectReference: {fileID: 1851064364}
     - target: {fileID: 8499540215084550778, guid: cb8eaa99e82d4984e929061d0d919354, type: 3}
       propertyPath: m_Name
       value: Opangas
@@ -4501,7 +4501,7 @@ PrefabInstance:
     - target: {fileID: 112291509849777555, guid: bf948c948324868469e04337541a056e, type: 3}
       propertyPath: JumpscareCanvas
       value: 
-      objectReference: {fileID: 1851064367}
+      objectReference: {fileID: 1851064364}
     - target: {fileID: 1221590854151199493, guid: bf948c948324868469e04337541a056e, type: 3}
       propertyPath: m_Name
       value: Big Opanga
@@ -5049,6 +5049,105 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1018017070}
   m_SourcePrefab: {fileID: 100100000, guid: 3073a24cc627bf74a99b9b827eae8de6, type: 3}
+--- !u!1001 &7643371544788318177
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5720667923593008024, guid: a8a1cf6617dabdb468b045d76b682c7b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.058
+      objectReference: {fileID: 0}
+    - target: {fileID: 5720667923593008024, guid: a8a1cf6617dabdb468b045d76b682c7b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 5720667923593008024, guid: a8a1cf6617dabdb468b045d76b682c7b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.451
+      objectReference: {fileID: 0}
+    - target: {fileID: 5720667923593008024, guid: a8a1cf6617dabdb468b045d76b682c7b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5720667923593008024, guid: a8a1cf6617dabdb468b045d76b682c7b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5720667923593008024, guid: a8a1cf6617dabdb468b045d76b682c7b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5720667923593008024, guid: a8a1cf6617dabdb468b045d76b682c7b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5720667923593008024, guid: a8a1cf6617dabdb468b045d76b682c7b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5720667923593008024, guid: a8a1cf6617dabdb468b045d76b682c7b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5720667923593008024, guid: a8a1cf6617dabdb468b045d76b682c7b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5862502333323254535, guid: a8a1cf6617dabdb468b045d76b682c7b, type: 3}
+      propertyPath: m_Name
+      value: Fakers
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5862502333323254535, guid: a8a1cf6617dabdb468b045d76b682c7b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7643371544788318180}
+    - targetCorrespondingSourceObject: {fileID: 5862502333323254535, guid: a8a1cf6617dabdb468b045d76b682c7b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7643371544788318179}
+  m_SourcePrefab: {fileID: 100100000, guid: a8a1cf6617dabdb468b045d76b682c7b, type: 3}
+--- !u!1 &7643371544788318178 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5862502333323254535, guid: a8a1cf6617dabdb468b045d76b682c7b, type: 3}
+  m_PrefabInstance: {fileID: 7643371544788318177}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7643371544788318179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7643371544788318178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 895cfbbd3604a1b49aba584ecb7e5824, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeTillAttack: 0
+  Jumpscare: {fileID: 0}
+  JumpscareCanvas: {fileID: 0}
+--- !u!114 &7643371544788318180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7643371544788318178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59ad3b0e16989454c915127f2b82fac2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minDelay: 0
+  maxDelay: 0
+  RoomInfos: {fileID: 0}
+  sounds: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -5063,3 +5162,4 @@ SceneRoots:
   - {fileID: 1851064368}
   - {fileID: 154745534}
   - {fileID: 2112649266}
+  - {fileID: 7643371544788318177}
