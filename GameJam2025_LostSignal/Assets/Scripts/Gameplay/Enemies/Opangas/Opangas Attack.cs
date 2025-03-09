@@ -3,9 +3,11 @@ using UnityEngine;
 public class OpangasAttack : MonoBehaviour
 {
     float lastTime;
-    float soundcluesCooldown;
+    [SerializeField] float soundcluesCooldown;
     RoomManager.RoomState room;
     int timesOfWarning;
+    [SerializeField] int maxWarnings;
+    [SerializeField] float minPitch, maxPitch;
     AudioSource[] sounds;
     int randomNumber;
     AudioLowPassFilter lowPassFilter;
@@ -38,18 +40,11 @@ public class OpangasAttack : MonoBehaviour
             lowPassFilter.enabled = true;
             randomNumber = Random.Range(0,sounds.Length-1);
             //lowPassFilter = sounds[randomNumber].GetComponent<AudioLowPassFilter>();
-            if (timesOfWarning == 0)
+            if(timesOfWarning != maxWarnings)
             {
-                timesOfWarning = 1;
-                sounds[randomNumber].pitch = Random.Range(1.25f, 2.5f);
+                timesOfWarning++;
+                sounds[randomNumber].pitch = Random.Range(minPitch, maxPitch);
                 sounds[randomNumber].Play();
-                lastTime = Time.time;
-                return;
-            }
-          if(timesOfWarning == 1)
-            {
-                timesOfWarning = 2;
-                sounds[randomNumber ].Play();
                 lastTime = Time.time;
                 return;
             }

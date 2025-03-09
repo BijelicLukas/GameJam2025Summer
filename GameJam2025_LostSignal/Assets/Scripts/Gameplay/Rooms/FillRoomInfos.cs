@@ -17,5 +17,7 @@ public class FillRoomInfos : MonoBehaviour
         RoomInfo.RoomLLPosition = children[7].position;
         RoomInfo.RoomMLPosition = children[8].position;
         RoomInfo.RoomRLPosition = children[9].position;
+
+        RoomInfo.FillDictionary();
     }
 }

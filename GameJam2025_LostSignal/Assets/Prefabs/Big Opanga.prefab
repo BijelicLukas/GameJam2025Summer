@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8499540215084550778
+--- !u!1 &1221590854151199493
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,32 +8,32 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 20292073066817247}
-  - component: {fileID: 497381923851271894}
-  - component: {fileID: 599999300890144906}
-  - component: {fileID: 3652949485575080594}
-  - component: {fileID: 4303037389651252564}
-  - component: {fileID: 5375306677347205173}
-  - component: {fileID: 4051128639213528471}
-  - component: {fileID: 1930193715278124785}
-  - component: {fileID: 7358016899311156075}
-  - component: {fileID: 9168278267185703434}
-  - component: {fileID: 2665889243935562675}
-  - component: {fileID: 6999018755449357462}
+  - component: {fileID: 4854850657713797761}
+  - component: {fileID: 2650517173679315926}
+  - component: {fileID: 8177965075699111284}
+  - component: {fileID: 112291509849777555}
+  - component: {fileID: 2107403906606830934}
+  - component: {fileID: 8461893286502171615}
+  - component: {fileID: 605228686384146615}
+  - component: {fileID: 1971418428977560914}
+  - component: {fileID: 225208798273245942}
+  - component: {fileID: 3591015743375136143}
+  - component: {fileID: 7333983208118119858}
+  - component: {fileID: 8902459092901709875}
   m_Layer: 0
-  m_Name: Opangas
+  m_Name: Big Opanga
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &20292073066817247
+--- !u!4 &4854850657713797761
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8499540215084550778}
+  m_GameObject: {fileID: 1221590854151199493}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -42,65 +42,65 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &497381923851271894
+--- !u!114 &2650517173679315926
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8499540215084550778}
+  m_GameObject: {fileID: 1221590854151199493}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c666bcbc0a80f4d83383d99d175f74, type: 3}
+  m_Script: {fileID: 11500000, guid: 6ab6f90ae3605ce44b621d0c7af3cfa8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   lastAttackedRoom: 0
-  minDelay: 5
-  maxDelay: 20
+  minDelay: 20
+  maxDelay: 40
   RoomInfos: {fileID: 11400000, guid: 89b4842f79ce4f44385697b10a05856d, type: 2}
   sounds:
-  - {fileID: 5375306677347205173}
-  - {fileID: 4051128639213528471}
-  - {fileID: 1930193715278124785}
-  - {fileID: 7358016899311156075}
-  - {fileID: 9168278267185703434}
-  - {fileID: 2665889243935562675}
---- !u!114 &599999300890144906
+  - {fileID: 8461893286502171615}
+  - {fileID: 605228686384146615}
+  - {fileID: 1971418428977560914}
+  - {fileID: 225208798273245942}
+  - {fileID: 3591015743375136143}
+  - {fileID: 7333983208118119858}
+--- !u!114 &8177965075699111284
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8499540215084550778}
+  m_GameObject: {fileID: 1221590854151199493}
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c2a3f9eb135f7b4aa0d535e33f21340, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundcluesCooldown: 10
-  maxWarnings: 2
-  minPitch: 1.25
-  maxPitch: 1.75
---- !u!114 &3652949485575080594
+  soundcluesCooldown: 30
+  maxWarnings: 1
+  minPitch: 0.45
+  maxPitch: 0.75
+--- !u!114 &112291509849777555
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8499540215084550778}
+  m_GameObject: {fileID: 1221590854151199493}
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f5724d3808c30441ad31ca0132c1d46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Jumpscare: {fileID: 2665889243935562675}
---- !u!114 &4303037389651252564
+  Jumpscare: {fileID: 7333983208118119858}
+--- !u!114 &2107403906606830934
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8499540215084550778}
+  m_GameObject: {fileID: 1221590854151199493}
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff4c29ad31194234b9f5875b68ae0b1f, type: 3}
@@ -111,19 +111,19 @@ MonoBehaviour:
   maxDelay: 0
   RoomInfos: {fileID: 11400000, guid: 89b4842f79ce4f44385697b10a05856d, type: 2}
   sounds:
-  - {fileID: 5375306677347205173}
-  - {fileID: 4051128639213528471}
-  - {fileID: 1930193715278124785}
-  - {fileID: 7358016899311156075}
-  - {fileID: 9168278267185703434}
-  - {fileID: 2665889243935562675}
---- !u!82 &5375306677347205173
+  - {fileID: 8461893286502171615}
+  - {fileID: 605228686384146615}
+  - {fileID: 1971418428977560914}
+  - {fileID: 225208798273245942}
+  - {fileID: 3591015743375136143}
+  - {fileID: 7333983208118119858}
+--- !u!82 &8461893286502171615
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8499540215084550778}
+  m_GameObject: {fileID: 1221590854151199493}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -214,13 +214,13 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!82 &4051128639213528471
+--- !u!82 &605228686384146615
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8499540215084550778}
+  m_GameObject: {fileID: 1221590854151199493}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -311,13 +311,13 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!82 &1930193715278124785
+--- !u!82 &1971418428977560914
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8499540215084550778}
+  m_GameObject: {fileID: 1221590854151199493}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -408,13 +408,13 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!82 &7358016899311156075
+--- !u!82 &225208798273245942
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8499540215084550778}
+  m_GameObject: {fileID: 1221590854151199493}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -505,13 +505,13 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!82 &9168278267185703434
+--- !u!82 &3591015743375136143
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8499540215084550778}
+  m_GameObject: {fileID: 1221590854151199493}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -602,13 +602,13 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!82 &2665889243935562675
+--- !u!82 &7333983208118119858
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8499540215084550778}
+  m_GameObject: {fileID: 1221590854151199493}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -616,7 +616,7 @@ AudioSource:
   m_Resource: {fileID: 8300000, guid: 09773b031010f4347a3f50718e832f84, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
-  m_Pitch: 1.75
+  m_Pitch: 0.75
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -699,13 +699,13 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!169 &6999018755449357462
+--- !u!169 &8902459092901709875
 AudioLowPassFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8499540215084550778}
+  m_GameObject: {fileID: 1221590854151199493}
   m_Enabled: 0
   serializedVersion: 3
   m_LowpassResonanceQ: 1
