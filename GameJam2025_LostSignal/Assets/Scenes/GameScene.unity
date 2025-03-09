@@ -245,6 +245,18 @@ PrefabInstance:
       propertyPath: roomManager
       value: 
       objectReference: {fileID: 2111504988}
+    - target: {fileID: 4075611053770163351, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.b
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4075611053770163351, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.g
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4075611053770163351, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.r
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 5544012326833615373, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -259,7 +271,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5544012326833615373, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.85
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 5544012326833615373, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_AnchorMin.x
@@ -267,7 +279,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5544012326833615373, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.75
+      value: 0.65
       objectReference: {fileID: 0}
     - target: {fileID: 5544012326833615373, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_SizeDelta.x
@@ -842,6 +854,18 @@ PrefabInstance:
       propertyPath: roomManager
       value: 
       objectReference: {fileID: 2111504988}
+    - target: {fileID: 4075611053770163351, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.b
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4075611053770163351, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.g
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4075611053770163351, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.r
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 5544012326833615373, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -856,7 +880,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5544012326833615373, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.65
+      value: 0.55
       objectReference: {fileID: 0}
     - target: {fileID: 5544012326833615373, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_AnchorMin.x
@@ -864,7 +888,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5544012326833615373, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.55
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 5544012326833615373, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_SizeDelta.x
@@ -1109,6 +1133,18 @@ PrefabInstance:
       propertyPath: roomManager
       value: 
       objectReference: {fileID: 2111504988}
+    - target: {fileID: 4075611053770163351, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.b
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4075611053770163351, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.g
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4075611053770163351, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.r
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 5544012326833615373, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1123,7 +1159,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5544012326833615373, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.85
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 5544012326833615373, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_AnchorMin.x
@@ -1131,7 +1167,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5544012326833615373, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.75
+      value: 0.65
       objectReference: {fileID: 0}
     - target: {fileID: 5544012326833615373, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_SizeDelta.x
@@ -1547,6 +1583,18 @@ PrefabInstance:
       propertyPath: roomManager
       value: 
       objectReference: {fileID: 2111504988}
+    - target: {fileID: 4075611053770163351, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.b
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4075611053770163351, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.g
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4075611053770163351, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.r
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 5544012326833615373, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1561,7 +1609,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5544012326833615373, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.75
+      value: 0.65
       objectReference: {fileID: 0}
     - target: {fileID: 5544012326833615373, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_AnchorMin.x
@@ -1569,7 +1617,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5544012326833615373, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.65
+      value: 0.55
       objectReference: {fileID: 0}
     - target: {fileID: 5544012326833615373, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_SizeDelta.x
@@ -1716,6 +1764,18 @@ PrefabInstance:
       propertyPath: roomManager
       value: 
       objectReference: {fileID: 2111504988}
+    - target: {fileID: 4075611053770163351, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.b
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4075611053770163351, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.g
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4075611053770163351, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.r
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 5544012326833615373, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1730,7 +1790,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5544012326833615373, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.75
+      value: 0.65
       objectReference: {fileID: 0}
     - target: {fileID: 5544012326833615373, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_AnchorMin.x
@@ -1738,7 +1798,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5544012326833615373, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.65
+      value: 0.55
       objectReference: {fileID: 0}
     - target: {fileID: 5544012326833615373, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_SizeDelta.x
@@ -1997,6 +2057,18 @@ PrefabInstance:
       propertyPath: roomManager
       value: 
       objectReference: {fileID: 2111504988}
+    - target: {fileID: 4075611053770163351, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.b
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4075611053770163351, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.g
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4075611053770163351, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.r
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 5544012326833615373, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2011,7 +2083,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5544012326833615373, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.75
+      value: 0.65
       objectReference: {fileID: 0}
     - target: {fileID: 5544012326833615373, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_AnchorMin.x
@@ -2019,7 +2091,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5544012326833615373, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.65
+      value: 0.55
       objectReference: {fileID: 0}
     - target: {fileID: 5544012326833615373, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_SizeDelta.x
@@ -2166,6 +2238,18 @@ PrefabInstance:
       propertyPath: roomManager
       value: 
       objectReference: {fileID: 2111504988}
+    - target: {fileID: 4075611053770163351, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.b
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4075611053770163351, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.g
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4075611053770163351, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.r
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 5544012326833615373, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2180,7 +2264,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5544012326833615373, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.65
+      value: 0.55
       objectReference: {fileID: 0}
     - target: {fileID: 5544012326833615373, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_AnchorMin.x
@@ -2188,7 +2272,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5544012326833615373, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.55
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 5544012326833615373, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_SizeDelta.x
@@ -2419,6 +2503,18 @@ PrefabInstance:
       propertyPath: roomManager
       value: 
       objectReference: {fileID: 2111504988}
+    - target: {fileID: 4075611053770163351, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.b
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4075611053770163351, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.g
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4075611053770163351, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.r
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 5544012326833615373, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2433,7 +2529,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5544012326833615373, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.65
+      value: 0.55
       objectReference: {fileID: 0}
     - target: {fileID: 5544012326833615373, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_AnchorMin.x
@@ -2441,7 +2537,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5544012326833615373, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.55
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 5544012326833615373, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_SizeDelta.x
@@ -3517,6 +3613,18 @@ PrefabInstance:
       propertyPath: roomManager
       value: 
       objectReference: {fileID: 2111504988}
+    - target: {fileID: 4075611053770163351, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.b
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4075611053770163351, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.g
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4075611053770163351, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.r
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 5544012326833615373, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -3531,7 +3639,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5544012326833615373, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.85
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 5544012326833615373, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_AnchorMin.x
@@ -3539,7 +3647,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5544012326833615373, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.75
+      value: 0.65
       objectReference: {fileID: 0}
     - target: {fileID: 5544012326833615373, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_SizeDelta.x
@@ -3837,7 +3945,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8209230140083357769, guid: 3073a24cc627bf74a99b9b827eae8de6, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.55
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 8209230140083357769, guid: 3073a24cc627bf74a99b9b827eae8de6, type: 3}
       propertyPath: m_AnchorMin.x
@@ -3845,7 +3953,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8209230140083357769, guid: 3073a24cc627bf74a99b9b827eae8de6, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.4
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 8209230140083357769, guid: 3073a24cc627bf74a99b9b827eae8de6, type: 3}
       propertyPath: m_SizeDelta.x
