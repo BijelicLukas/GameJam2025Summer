@@ -18,6 +18,8 @@ public class RoomInfosScript : ScriptableObject
 
     public event Action<bool> OnRoomRespondsChanged;
     bool roomRespondsRequest = false;
+    
+    public float volume = 0f;
     public bool RoomRespondsReqeust
     {
         get { return roomRespondsRequest; }

@@ -49,8 +49,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59ad3b0e16989454c915127f2b82fac2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minDelay: 1
-  maxDelay: 20
+  minDelay: 5
+  maxDelay: 50
   RoomInfos: {fileID: 11400000, guid: 89b4842f79ce4f44385697b10a05856d, type: 2}
   sounds:
   - {fileID: 8446810716553558688}
@@ -62,12 +62,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5862502333323254535}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 895cfbbd3604a1b49aba584ecb7e5824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeTillAttack: 60
+  TimeTillAttack: 20
   Jumpscare: {fileID: 6498455135692126639}
   JumpscareCanvas: {fileID: 0}
 --- !u!82 &8446810716553558688
@@ -80,9 +80,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d417ae036535cbc4ba923c01cb814a88, type: 3}
-  m_Resource: {fileID: 8300000, guid: d417ae036535cbc4ba923c01cb814a88, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 556fa541e35d6b94b93d79f0009b7d55, type: 3}
+  m_Resource: {fileID: 8300000, guid: 556fa541e35d6b94b93d79f0009b7d55, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 0.5
   Loop: 0
@@ -179,7 +179,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 556fa541e35d6b94b93d79f0009b7d55, type: 3}
   m_Resource: {fileID: 8300000, guid: 556fa541e35d6b94b93d79f0009b7d55, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1.75
   Loop: 0
@@ -301,7 +301,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d417ae036535cbc4ba923c01cb814a88, type: 3}
   m_Resource: {fileID: 8300000, guid: d417ae036535cbc4ba923c01cb814a88, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

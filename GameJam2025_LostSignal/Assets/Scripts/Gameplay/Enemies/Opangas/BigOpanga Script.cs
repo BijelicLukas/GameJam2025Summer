@@ -11,7 +11,7 @@ public class BigOpangaScript : OpangasScript
             ResetAttack();
             chance = Random.Range(0, 101);
             currentlyAttacking = true;
-
+            RoomInfos.volume = 0.1f;
             // 60% Links Rechts
             if(chance <= 60)
             {

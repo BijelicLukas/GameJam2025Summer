@@ -35,7 +35,13 @@ public class OpangasScript : MonoBehaviour
 
     protected virtual void Update()
     {
-        if (currentlyAttacking) attackScript.enabled = true;
+
+        if (currentlyAttacking)
+        {
+            RoomInfos.volume = 0.1f;
+            attackScript.enabled = true;
+        }
+        else RoomInfos.volume = 0;
         if (attackScript.enabled && !currentlyAttacking) attackScript.enabled = false;
         if ((!currentlyAttacking && lastTime + delay < Time.time))
         {
@@ -43,7 +49,6 @@ public class OpangasScript : MonoBehaviour
             ResetAttack();
             chance = Random.Range(0, 101);
             currentlyAttacking = true;
-
             // 60% für Mitte
             if (chance <= 60)
             {
@@ -100,7 +105,12 @@ public class OpangasScript : MonoBehaviour
 
     protected virtual void AttackRoom(RoomManager.RoomState targetedRoom, Vector3 newPosition)
     {
-        if (RoomInfos.AttackedRooms[targetedRoom] == true) { currentlyAttacking = false; return; };
+        if (RoomInfos.AttackedRooms[targetedRoom] == true) 
+        {
+            currentlyAttacking = false;
+            RoomInfos.volume = 0;
+            return; 
+        };
         transform.position = newPosition;
         RoomInfos.AttackedRooms[targetedRoom] = true;
         lastAttackedRoom = targetedRoom;

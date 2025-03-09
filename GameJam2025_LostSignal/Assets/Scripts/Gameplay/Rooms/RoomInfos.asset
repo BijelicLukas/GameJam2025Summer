@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc673c762fe8ddb4bb0e1a5ba5e46d00, type: 3}
   m_Name: RoomInfos
   m_EditorClassIdentifier: 
-  RoomLTPosition: {x: 0, y: 0, z: 0}
-  RoomMTPosition: {x: -9, y: 1.5, z: 6}
-  RoomRTPosition: {x: 0, y: 1.5, z: 6}
-  RoomLMPosition: {x: 9, y: 1.5, z: 6}
-  RoomMMPosition: {x: -9, y: 1.5, z: 0}
-  RoomRMPosition: {x: 0, y: 1.5, z: 0}
-  RoomLLPosition: {x: 9, y: 1.5, z: 0}
-  RoomMLPosition: {x: -9, y: 1.5, z: -6}
-  RoomRLPosition: {x: 0, y: 1.5, z: -6}
+  RoomLTPosition: {x: -9, y: 1.5, z: 6}
+  RoomMTPosition: {x: 0, y: 1.5, z: 6}
+  RoomRTPosition: {x: 9, y: 1.5, z: 6}
+  RoomLMPosition: {x: -9, y: 1.5, z: 0}
+  RoomMMPosition: {x: 0, y: 1.5, z: 0}
+  RoomRMPosition: {x: 9, y: 1.5, z: 0}
+  RoomLLPosition: {x: -9, y: 1.5, z: -6}
+  RoomMLPosition: {x: 0, y: 1.5, z: -6}
+  RoomRLPosition: {x: 9, y: 1.5, z: -6}
+  volume: 0
