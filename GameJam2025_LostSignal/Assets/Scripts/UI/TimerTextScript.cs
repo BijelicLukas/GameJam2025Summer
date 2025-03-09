@@ -19,8 +19,8 @@ public class TimerTextScript : MonoBehaviour
     {
         optionInfo.TimerMinutes = 5;
         optionInfo.TimerSeconds = 50;
-        //optionInfo.TimerMinutes = 0;
-        //optionInfo.TimerSeconds = 20;
+        optionInfo.TimerMinutes = 0;
+        optionInfo.TimerSeconds = 20;
         startTimer = Time.time;
         TimeDuration = optionInfo.TimerMinutes * 60 + optionInfo.TimerSeconds;
     }

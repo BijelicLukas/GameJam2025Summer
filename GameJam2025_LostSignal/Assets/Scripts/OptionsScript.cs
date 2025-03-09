@@ -7,4 +7,6 @@ public class OptionsScript : ScriptableObject
     public float TimerMinutes;
     public float TimerSeconds;
     public int mistakes;
+    public int clickerCounter;
+    public int highscore;
 }

@@ -17,6 +17,7 @@ public class RoomLogic : MonoBehaviour
     float lastTime;
     float delay;
     bool allowedToSpeak;
+    bool startedSpeaking;
 
     //public event Action<bool> DoneSpeaking;
 
@@ -25,6 +26,7 @@ public class RoomLogic : MonoBehaviour
         roomManager.OnRoomStateChanged += OnRoomChange;
         lastTime = Time.time;
         allowedToSpeak = false;
+        startedSpeaking = false;
 
         telephoneAudio = CorrospondingButton.GetComponent<AudioSource>();
         lowPassFilter = telephoneAudio.GetComponent<AudioLowPassFilter>();
@@ -38,14 +40,16 @@ public class RoomLogic : MonoBehaviour
         if(allowedToSpeak && lastTime + delay < Time.time)
         {
             lowPassFilter.enabled = true;
-            RoomInfo.RoomRespondsReqeust = false;
+            startedSpeaking = true;
             allowedToSpeak = false;
             telephoneAudio.Play();
         }
 
-        if(!telephoneAudio.isPlaying)
+        if(startedSpeaking && !telephoneAudio.isPlaying)
         {
             lowPassFilter.enabled = false;
+            RoomInfo.RoomRespondsReqeust = false;
+            startedSpeaking = false;
         }
         
     }
