@@ -53,8 +53,12 @@ public class ChainsawScript : MonoBehaviour
         }
         if(currentlyAttacking != RoomManager.RoomState.None && !chainsawNoise.isPlaying)
         {
+            transform.position = new Vector3(0, 6.5f, -0.3f);
+            JumpScareCanvas.SetActive(true);
             chainsawJumpScare.Play();
             currentlyAttacking = RoomManager.RoomState.None;
+            lastTime = Time.time;
+            delay = 500;
             killingBlow = true;
             return;
         }
