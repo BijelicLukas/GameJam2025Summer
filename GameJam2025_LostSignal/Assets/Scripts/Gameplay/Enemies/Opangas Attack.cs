@@ -13,9 +13,10 @@ public class OpangasAttack : MonoBehaviour
 
     private void Start()
     {
-        soundcluesCooldown = 5;
+        soundcluesCooldown = 10;
         sounds = GetComponent<OpangasScript>().sounds;
-        
+        lowPassFilter = GetComponent<AudioLowPassFilter>();
+        lowPassFilter.cutoffFrequency = 500f;
     }
 
     public void OnEnable()
@@ -25,16 +26,22 @@ public class OpangasAttack : MonoBehaviour
         timesOfWarning = 0;
     }
 
+    private void OnDisable()
+    {
+        lowPassFilter.enabled = false;
+    }
+
     private void Update()
     {
         if(lastTime + soundcluesCooldown < Time.time)
         {
+            lowPassFilter.enabled = true;
             randomNumber = Random.Range(0,sounds.Length-1);
-            lowPassFilter = sounds[randomNumber].GetComponent<AudioLowPassFilter>();
-            lowPassFilter.cutoffFrequency = 500f;
+            //lowPassFilter = sounds[randomNumber].GetComponent<AudioLowPassFilter>();
             if (timesOfWarning == 0)
             {
                 timesOfWarning = 1;
+                sounds[randomNumber].pitch = Random.Range(1.25f, 2.5f);
                 sounds[randomNumber].Play();
                 lastTime = Time.time;
                 return;

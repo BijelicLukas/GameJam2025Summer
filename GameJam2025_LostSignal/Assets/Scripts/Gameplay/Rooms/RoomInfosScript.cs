@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -15,7 +16,21 @@ public class RoomInfosScript : ScriptableObject
     public Vector3 RoomMLPosition;
     public Vector3 RoomRLPosition;
 
-    public bool RoomRespondsReqeust;
+    public event Action<bool> OnRoomRespondsChanged;
+    bool roomRespondsRequest = false;
+    public bool RoomRespondsReqeust
+    {
+        get { return roomRespondsRequest; }
+        set
+        {
+            if(roomRespondsRequest != value)
+            {
+                roomRespondsRequest = value;
+                OnRoomRespondsChanged?.Invoke(value);
+            }
+        }
+    }
+    
 
     public Dictionary<RoomManager.RoomState,bool> AttackedRooms = new Dictionary<RoomManager.RoomState, bool>();
     

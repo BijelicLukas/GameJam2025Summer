@@ -39,7 +39,6 @@ public class RoomLogic : MonoBehaviour
         {
             lowPassFilter.enabled = true;
             RoomInfo.RoomRespondsReqeust = false;
-            Debug.Log("Lets fucking go, SPEAKING");
             allowedToSpeak = false;
             telephoneAudio.Play();
         }
@@ -57,12 +56,12 @@ public class RoomLogic : MonoBehaviour
         {
             lastTime = Time.time;
             allowedToSpeak = true;
-            delay = UnityEngine.Random.Range(2f, 3f);
+            delay = UnityEngine.Random.Range(3f, 7f);
 
             if (RoomInfo.AttackedRooms[RoomState])
             {
-                delay = UnityEngine.Random.Range(5f, 7f);
-                Debug.Log("You found the Opanga");
+                allowedToSpeak = false;
+                RoomInfo.RoomRespondsReqeust = false;
             }
         }
         

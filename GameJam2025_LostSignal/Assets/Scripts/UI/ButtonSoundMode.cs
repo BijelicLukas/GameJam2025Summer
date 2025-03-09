@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class ButtonSoundMode : MonoBehaviour
 {
@@ -8,7 +10,12 @@ public class ButtonSoundMode : MonoBehaviour
     public void OnButtonPressed()
     {
         if(!enabled) return;
-        if (RoomInfo.RoomRespondsReqeust) return;
+        if (RoomInfo.RoomRespondsReqeust)
+        {
+            GetComponent<UnityEngine.UI.Button>().interactable = false;
+            return;
+        }
+        
         RoomInfo.RoomRespondsReqeust = true;
         GetComponent<AudioSource>().PlayDelayed(0.25f);
         switch (ButtonID)
