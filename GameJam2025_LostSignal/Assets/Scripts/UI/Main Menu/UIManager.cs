@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
+    [SerializeField] OptionsScript Info;
     public enum MenuState { MainMenu,Options,Tutorial,Quit}
 
     [Serializable]
@@ -14,6 +15,7 @@ public class UIManager : MonoBehaviour
         public MenuState state;
         public GameObject canvas;
     }
+    
 
     public List<UIElement> UIElements;
     public MenuState currentState;
@@ -42,7 +44,8 @@ public class UIManager : MonoBehaviour
        // Option & Tutorial
             // Go Back
             public void ShowMainMenu() => SwitchState(MenuState.MainMenu);
-
+        // Highscore reseten
+        public void ResetHighscore() => Info.highscore = 0;
     // Win und Lose
     public void GetBackToMenu() => SceneManager.LoadScene("Main Menu");
 }

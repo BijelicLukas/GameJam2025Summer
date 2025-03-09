@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 076ad188b56493945bc9e37c4391ae37, type: 3}
   m_Name: OptionsInfo
   m_EditorClassIdentifier: 
-  TimerMinutes: 5
-  TimerSeconds: 33.596836
+  TimerMinutes: -1
+  TimerSeconds: 59.980682
+  mistakes: 0
+  clickerCounter: 45
+  highscore: 45
