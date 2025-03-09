@@ -4,14 +4,14 @@ using UnityEngine.SceneManagement;
 public class OpangasKillScript : MonoBehaviour
 {
     [SerializeField] AudioSource Jumpscare;
-    [SerializeField] Canvas JumpscareCanvas;
+    [SerializeField] GameObject JumpscareCanvas;
 
     private void OnEnable()
     {
         GetComponent<OpangasScript>().enabled = false;
         GetComponent<OpangasAttack>().enabled = false;
         transform.position = new Vector3(0, 6.5f, -0.3f);
-        JumpscareCanvas.enabled = true;
+        JumpscareCanvas.SetActive(true);
         Jumpscare.Play();
     }
     private void Update()
