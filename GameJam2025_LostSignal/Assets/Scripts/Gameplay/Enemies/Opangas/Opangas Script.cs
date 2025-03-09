@@ -108,7 +108,6 @@ public class OpangasScript : MonoBehaviour
         if (RoomInfos.AttackedRooms[targetedRoom] == true) 
         {
             currentlyAttacking = false;
-            RoomInfos.volume = 0;
             return; 
         };
         transform.position = newPosition;
