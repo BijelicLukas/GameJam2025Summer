@@ -430,7 +430,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 980358376184731933, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_fontSize
-      value: 0.45
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 980358376184731933, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_fontAsset
@@ -450,7 +450,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 980358376184731933, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_fontSizeBase
-      value: 0.45
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 980358376184731933, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_isRightToLeft
@@ -476,6 +476,10 @@ PrefabInstance:
       propertyPath: roomManager
       value: 
       objectReference: {fileID: 2111504988}
+    - target: {fileID: 2468487660914953045, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
+      propertyPath: buttonManager
+      value: 
+      objectReference: {fileID: 719172903}
     - target: {fileID: 4075611053770163351, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_Colors.m_DisabledColor.b
       value: 0.4
@@ -1199,6 +1203,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1138875714}
     m_Modifications:
     - target: {fileID: 980358376184731933, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
+      propertyPath: m_fontSize
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 980358376184731933, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_fontColor.b
       value: 0.7529412
       objectReference: {fileID: 0}
@@ -1211,6 +1219,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 980358376184731933, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 980358376184731933, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4290838527
       objectReference: {fileID: 0}
@@ -1218,6 +1230,10 @@ PrefabInstance:
       propertyPath: roomManager
       value: 
       objectReference: {fileID: 2111504988}
+    - target: {fileID: 2468487660914953045, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
+      propertyPath: buttonManager
+      value: 
+      objectReference: {fileID: 719172903}
     - target: {fileID: 4075611053770163351, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_Colors.m_DisabledColor.b
       value: 0.4
@@ -1475,7 +1491,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 980358376184731933, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_fontSize
-      value: 0.45
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 980358376184731933, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_fontAsset
@@ -1495,7 +1511,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 980358376184731933, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_fontSizeBase
-      value: 0.45
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 980358376184731933, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_sharedMaterial
@@ -1517,6 +1533,10 @@ PrefabInstance:
       propertyPath: roomManager
       value: 
       objectReference: {fileID: 2111504988}
+    - target: {fileID: 2468487660914953045, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
+      propertyPath: buttonManager
+      value: 
+      objectReference: {fileID: 719172903}
     - target: {fileID: 4075611053770163351, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_Colors.m_DisabledColor.b
       value: 0.4
@@ -2232,6 +2252,10 @@ PrefabInstance:
       value: MM
       objectReference: {fileID: 0}
     - target: {fileID: 980358376184731933, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
+      propertyPath: m_fontSize
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 980358376184731933, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_fontColor.b
       value: 0.7529412
       objectReference: {fileID: 0}
@@ -2242,6 +2266,10 @@ PrefabInstance:
     - target: {fileID: 980358376184731933, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_fontColor.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 980358376184731933, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 980358376184731933, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -2255,6 +2283,10 @@ PrefabInstance:
       propertyPath: roomManager
       value: 
       objectReference: {fileID: 2111504988}
+    - target: {fileID: 2468487660914953045, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
+      propertyPath: buttonManager
+      value: 
+      objectReference: {fileID: 719172903}
     - target: {fileID: 4075611053770163351, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_Colors.m_DisabledColor.b
       value: 0.4
@@ -2413,6 +2445,10 @@ PrefabInstance:
       value: RM
       objectReference: {fileID: 0}
     - target: {fileID: 980358376184731933, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
+      propertyPath: m_fontSize
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 980358376184731933, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_fontColor.b
       value: 0.7529412
       objectReference: {fileID: 0}
@@ -2423,6 +2459,10 @@ PrefabInstance:
     - target: {fileID: 980358376184731933, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_fontColor.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 980358376184731933, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 980358376184731933, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -2436,6 +2476,10 @@ PrefabInstance:
       propertyPath: roomManager
       value: 
       objectReference: {fileID: 2111504988}
+    - target: {fileID: 2468487660914953045, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
+      propertyPath: buttonManager
+      value: 
+      objectReference: {fileID: 719172903}
     - target: {fileID: 4075611053770163351, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_Colors.m_DisabledColor.b
       value: 0.4
@@ -2701,10 +2745,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1138875714}
     m_Modifications:
+    - target: {fileID: 980358376184731933, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
+      propertyPath: m_fontSize
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 980358376184731933, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 2468487660914953045, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: roomManager
       value: 
       objectReference: {fileID: 2111504988}
+    - target: {fileID: 2468487660914953045, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
+      propertyPath: buttonManager
+      value: 
+      objectReference: {fileID: 719172903}
     - target: {fileID: 5544012326833615373, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2819,6 +2875,10 @@ PrefabInstance:
       value: LL
       objectReference: {fileID: 0}
     - target: {fileID: 980358376184731933, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
+      propertyPath: m_fontSize
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 980358376184731933, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_fontColor.b
       value: 0.7529412
       objectReference: {fileID: 0}
@@ -2829,6 +2889,10 @@ PrefabInstance:
     - target: {fileID: 980358376184731933, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_fontColor.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 980358376184731933, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 980358376184731933, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -2842,6 +2906,10 @@ PrefabInstance:
       propertyPath: roomManager
       value: 
       objectReference: {fileID: 2111504988}
+    - target: {fileID: 2468487660914953045, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
+      propertyPath: buttonManager
+      value: 
+      objectReference: {fileID: 719172903}
     - target: {fileID: 4075611053770163351, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_Colors.m_DisabledColor.b
       value: 0.4
@@ -3084,6 +3152,10 @@ PrefabInstance:
       value: ML
       objectReference: {fileID: 0}
     - target: {fileID: 980358376184731933, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
+      propertyPath: m_fontSize
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 980358376184731933, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_fontColor.b
       value: 0.7529412
       objectReference: {fileID: 0}
@@ -3094,6 +3166,10 @@ PrefabInstance:
     - target: {fileID: 980358376184731933, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_fontColor.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 980358376184731933, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 980358376184731933, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -3107,6 +3183,10 @@ PrefabInstance:
       propertyPath: roomManager
       value: 
       objectReference: {fileID: 2111504988}
+    - target: {fileID: 2468487660914953045, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
+      propertyPath: buttonManager
+      value: 
+      objectReference: {fileID: 719172903}
     - target: {fileID: 4075611053770163351, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_Colors.m_DisabledColor.b
       value: 0.4
@@ -4561,7 +4641,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 980358376184731933, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_fontSize
-      value: 0.45
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 980358376184731933, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_fontAsset
@@ -4585,7 +4665,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 980358376184731933, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_fontSizeBase
-      value: 0.45
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 980358376184731933, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_sharedMaterial
@@ -4619,6 +4699,10 @@ PrefabInstance:
       propertyPath: roomManager
       value: 
       objectReference: {fileID: 2111504988}
+    - target: {fileID: 2468487660914953045, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
+      propertyPath: buttonManager
+      value: 
+      objectReference: {fileID: 719172903}
     - target: {fileID: 4075611053770163351, guid: 16c4d1069aca9b54bbccc3235d2626dd, type: 3}
       propertyPath: m_Colors.m_DisabledColor.b
       value: 0.4
@@ -5057,6 +5141,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4801898410009529047, guid: a8a1cf6617dabdb468b045d76b682c7b, type: 3}
+      propertyPath: maxDelay
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4801898410009529047, guid: a8a1cf6617dabdb468b045d76b682c7b, type: 3}
+      propertyPath: minDelay
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5720667923593008024, guid: a8a1cf6617dabdb468b045d76b682c7b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.058
@@ -5101,53 +5193,51 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fakers
       objectReference: {fileID: 0}
+    - target: {fileID: 6133335185812480886, guid: a8a1cf6617dabdb468b045d76b682c7b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6133335185812480886, guid: a8a1cf6617dabdb468b045d76b682c7b, type: 3}
+      propertyPath: JumpscareCanvas
+      value: 
+      objectReference: {fileID: 1851064364}
+    - target: {fileID: 6498455135692126639, guid: a8a1cf6617dabdb468b045d76b682c7b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6498455135692126639, guid: a8a1cf6617dabdb468b045d76b682c7b, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644465426429096842, guid: a8a1cf6617dabdb468b045d76b682c7b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644465426429096842, guid: a8a1cf6617dabdb468b045d76b682c7b, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8446810716553558688, guid: a8a1cf6617dabdb468b045d76b682c7b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8446810716553558688, guid: a8a1cf6617dabdb468b045d76b682c7b, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 556fa541e35d6b94b93d79f0009b7d55, type: 3}
+    - target: {fileID: 8446810716553558688, guid: a8a1cf6617dabdb468b045d76b682c7b, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 556fa541e35d6b94b93d79f0009b7d55, type: 3}
+    - target: {fileID: 8446810716553558688, guid: a8a1cf6617dabdb468b045d76b682c7b, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5862502333323254535, guid: a8a1cf6617dabdb468b045d76b682c7b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7643371544788318180}
-    - targetCorrespondingSourceObject: {fileID: 5862502333323254535, guid: a8a1cf6617dabdb468b045d76b682c7b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7643371544788318179}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8a1cf6617dabdb468b045d76b682c7b, type: 3}
---- !u!1 &7643371544788318178 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5862502333323254535, guid: a8a1cf6617dabdb468b045d76b682c7b, type: 3}
-  m_PrefabInstance: {fileID: 7643371544788318177}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &7643371544788318179
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7643371544788318178}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 895cfbbd3604a1b49aba584ecb7e5824, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TimeTillAttack: 0
-  Jumpscare: {fileID: 0}
-  JumpscareCanvas: {fileID: 0}
---- !u!114 &7643371544788318180
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7643371544788318178}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59ad3b0e16989454c915127f2b82fac2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minDelay: 0
-  maxDelay: 0
-  RoomInfos: {fileID: 0}
-  sounds: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

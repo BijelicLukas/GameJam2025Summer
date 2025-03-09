@@ -42,6 +42,16 @@ public class RoomInfosScript : ScriptableObject
         }
     }
 
+    public void SetRoomAttack(RoomManager.RoomState roomName, bool isUnderAttack)
+    {
+        AttackedRooms[roomName] = isUnderAttack;
+    }
+
+    public bool GetRoomStatus(RoomManager.RoomState roomName)
+    {
+        return AttackedRooms[roomName];
+    }
+
 
 
 }

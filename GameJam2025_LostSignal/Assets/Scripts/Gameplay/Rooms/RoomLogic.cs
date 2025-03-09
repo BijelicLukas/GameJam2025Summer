@@ -65,7 +65,7 @@ public class RoomLogic : MonoBehaviour
             if (RoomInfo.AttackedRooms[RoomState])
             {
                 allowedToSpeak = false;
-                RoomInfo.RoomRespondsReqeust = false;
+                if(!FakersScript.active) RoomInfo.RoomRespondsReqeust = false;
             }
         }
         

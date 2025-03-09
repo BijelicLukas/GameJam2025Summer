@@ -27,6 +27,7 @@ public class FakerAttackScript : MonoBehaviour
         if(!killing && lastTime + TimeTillAttack < Time.time)
         {
             GetComponent<FakersScript>().enabled = false;
+            GetComponent<AudioLowPassFilter>().enabled = false;
             transform.position = new Vector3(0, 6.5f, -0.3f);
             JumpscareCanvas.SetActive(true);
             Jumpscare.Play();
